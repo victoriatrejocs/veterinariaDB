@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const veterinariaSchema = mongoose.Schema({
+const mascotaSchema = mongoose.Schema({
     nombre:{
         type: String,
         required: [true, "Por favor ingrese el nombre de la mascota"]
@@ -46,6 +46,10 @@ const veterinariaSchema = mongoose.Schema({
         type: Number,
         required: [true, "Por favor ingrese la frecuencia respiratoria de la mascota"]
     }
-})
+},
+{
+    timestamps: true
+}
+)
 
-module.exports = mongoose.model ("Veterinaria", veterinariaSchema)
+module.exports = mongoose.model ("Mascota", mascotaSchema)
